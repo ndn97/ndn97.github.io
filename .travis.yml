@@ -2,7 +2,7 @@ language: ruby
 sudo: false
 install: 
   gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist
-script: jekyll build
+script: JEKYLL_ENV=production jekyll build
 deploy:
   provider: s3
   access_key_id: $S3_ACCESS_KEY_ID
