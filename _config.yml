@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            NAGESH D N
 tagline:          ''
 description:      'Blog'
-url:              https://ndn97.github.io
+url:              https://nageshdn.com
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
