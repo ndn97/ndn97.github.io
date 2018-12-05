@@ -12,6 +12,7 @@ phases:
     commands:
       - echo "******** Building Jekyll site ********"
       - jekyll build
+
   post_build:
     commands:
       - echo "******** Uploading to S3 ********"
