@@ -3,10 +3,15 @@ version: 0.1
 phases:
   install:
     commands:
-      - gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
+      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist
   build:
     commands:
       - echo "******** Building Jekyll site ********"
-      - jekyll build
+      - JEKYLL_ENV=production jekyll build
+
+  post_build:
+    commands:
       - echo "******** Uploading to S3 ********"
-      - aws s3 sync _site/ s3://www.nageshdn-draft.com
+      - aws s3 sync --delete --size-only --cache-control max-age=7201 _site/ "s3://${BUCKET_NAME}"
+      - aws cloudfront create-invalidation --distribution-id "${CLOUDFRONTDIST}" --paths "/*"
+      - aws s3api put-bucket-website --bucket "${BUCKET_NAME}" --website-configuration file://s3-website-config.json
