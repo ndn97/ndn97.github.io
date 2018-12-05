@@ -3,10 +3,10 @@ version: 0.1
 phases:
   install:
     commands:
-      - gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
+      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist
   build:
     commands:
       - echo "******** Building Jekyll site ********"
-      - jekyll build
+      - JEKYLL_ENV=production jekyll build
       - echo "******** Uploading to S3 ********"
       - aws s3 sync _site/ s3://www.nageshdn-draft.com
