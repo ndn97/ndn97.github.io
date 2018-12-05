@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo "******** Building Jekyll site ********"
-      - JEKYLL_ENV=production jekyll build
+      - jekyll build
   post_build:
     commands:
       - echo "******** Uploading to S3 ********"
