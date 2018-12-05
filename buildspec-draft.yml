@@ -1,0 +1,16 @@
+version: 0.2
+
+env:
+  variables:
+    JEKYLL_ENV: "production"
+   
+phases:
+  install:
+    commands:
+      - apt-get update -y
+      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist
+  build:
+    commands:
+      - echo "******** Building Jekyll site ********"
+      - jekyll build
+  
