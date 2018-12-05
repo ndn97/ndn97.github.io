@@ -7,5 +7,5 @@ By Integrating GitHub repository with AWS CodeBuild, it monitors every change in
 
 For posts which are in the draft branch, which goes through multiple revisions while drafting should not trigger build, to meet this, marked only Pull Requests as option in webhooks of the repository, with this it only builds whenever I wish to merge the draft branch with master branch using pull request and the output of the build will be available within the pullrequest itself.
 
-For Posts which need to be published, whenever the pull request from draft branch is closed, it will merge with master branch and causes the codebuild to build and deploy the website.
+For posts which need to be published, whenever the pull request from draft branch is closed, it will merge with master branch and causes the codebuild to build and deploy the website.
 
