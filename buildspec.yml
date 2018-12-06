@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist
+      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist jekyll-seo-tag jekyll-sitemap jekyll-gzip
   build:
     commands:
       - echo "******** Building Jekyll site ********"
