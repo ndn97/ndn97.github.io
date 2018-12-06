@@ -8,7 +8,7 @@ phases:
   install:
     commands:
       - bundle install
-   
+
   build:
     commands:
       - echo "******** Building Jekyll site ********"
