@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - bundle install
+      - bundle update
 
   build:
     commands:
