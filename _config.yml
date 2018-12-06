@@ -27,6 +27,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 
+
 disqus:
   shortname: nageshdn
 
