@@ -8,7 +8,7 @@ phases:
   install:
     commands:
       - apt-get update -y
-      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist jekyll-seo-tag jekyll-sitemap jekyll-gzip
+      - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist jekyll-seo-tag
   build:
     commands:
       - echo "******** Building Jekyll site ********"
