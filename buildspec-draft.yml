@@ -8,6 +8,7 @@ phases:
   install:
     commands:
       - apt-get update -y
+      - gem update github-pages
       - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist jekyll-seo-tag
   build:
     commands:
