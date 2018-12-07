@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            NAGESH D N
 tagline:          ''
-description:      'Blog'
+description:      'Technical professional proficient in datacenter/cloud infrastructure ,SDDC (compute, storage, network and management), software-defined, hyper-converged infrastructure (HCI), Cloud Solution Architect.'
 url:              https://nageshdn.com
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -26,12 +26,63 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+  - jekyll-include-cache
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+  - jekyll-include-cache
+
+compress_html:
+  clippings: all
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 
+
+paginate: 5 # amount of posts to show
+paginate_path: /page-:num/
+timezone: Asia/Kolkata # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+defaults:
+  #_posts
+  - scope:
+     path: ""
+     type: posts
+    values:
+     layout: single
+     author_profile: true
+     read_time: true
+     comments: true
+     share: true
+     related: true
 disqus:
   shortname: nageshdn
 
 google_analytics: UA-111754253-1
+
+google_site_verification : "IwCxye9SaFsyOsfw7vGNz12MYn-bOudeyzkVtZolzrk"
+bing_site_verification   : "0039DC36357A94284ACD48EEC0A20F48"
+#yandex_site_verification : "36298deb5ec6b694"
+#naver_site_verification  :
 
 # Custom vars
 

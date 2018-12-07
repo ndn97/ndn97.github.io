@@ -7,8 +7,8 @@ env:
 phases:
   install:
     commands:
-      # - gem install jekyll jekyll-feed jekyll-paginate  jekyll-gist jekyll-seo-tag
-      bundle install 
+      - bundle update
+
   build:
     commands:
       - echo "******** Building Jekyll site ********"
