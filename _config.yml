@@ -34,6 +34,64 @@ plugins:
   - jekyll-mentions
   - jekyll-include-cache
 
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+  - jekyll-include-cache
+
+compress_html:
+  clippings: all
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+permalink: /article/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page-:num/
+timezone: Asia/Kolkata # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+defaults:
+  #_posts
+  - scope:
+     path: ""
+     type: posts
+    values:
+     layout: single
+     author_profile: true
+     read_time: true
+     comments: true
+     share: true
+     related: true
+
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
 
 disqus:
   shortname: nageshdn
