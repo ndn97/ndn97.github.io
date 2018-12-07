@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            NAGESH D N
 tagline:          ''
-description:      'Blog'
+description:      'Technical professional proficient in datacenter/cloud infrastructure ,SDDC (compute, storage, network and management), software-defined, hyper-converged infrastructure (HCI), Cloud Solution Architect.'
 url:              https://nageshdn.com
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
