@@ -56,7 +56,6 @@ sass:
   style: compressed
 
 
-permalink: /article/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page-:num/
 timezone: Asia/Kolkata # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -74,25 +73,6 @@ defaults:
      comments: true
      share: true
      related: true
-
-category_archive:
-  type: jekyll-archives
-  path: /categories/
-tag_archive:
-  type: jekyll-archives
-  path: /tags/
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-
-
 disqus:
   shortname: nageshdn
 
