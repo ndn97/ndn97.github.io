@@ -12,9 +12,9 @@ For self-managed websites, Optimization for SEO need to be considered for better
   
   
 Quantified score for this website before optimiation was 71/100
-
+![Before SEO](_screenshots/before%20SEO.png)
 
 After performing HTML compression and enabling sitemap and robots.txt, the score improved to 84/100
-
+![After SEO](_screenshots/after%20SEO.png)
 
  
