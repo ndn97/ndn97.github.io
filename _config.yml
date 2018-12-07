@@ -98,6 +98,11 @@ disqus:
 
 google_analytics: UA-111754253-1
 
+google_site_verification : "IwCxye9SaFsyOsfw7vGNz12MYn-bOudeyzkVtZolzrk"
+bing_site_verification   : "0039DC36357A94284ACD48EEC0A20F48"
+#yandex_site_verification : "36298deb5ec6b694"
+#naver_site_verification  :
+
 # Custom vars
 
 #version:            3.5.3
