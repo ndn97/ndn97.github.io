@@ -18,4 +18,7 @@ Quantified score for this website before optimiation was 71/100
 After performing HTML compression and enabling sitemap and robots.txt, the score improved to 84/100
 ![After SEO](/assets/screenshots/after%20SEO.png)
 
+
 This is good improvement, will work towards improving the score to 90/100.
+
+Update 1: Cloudfront was not showing custom 404 error page, this is due to directly using S3 bucket as Origin for cloudfront, when changed this  to use S3 public endpoint,it fixed the issue
