@@ -21,4 +21,4 @@ After performing HTML compression and enabling sitemap and robots.txt, the score
 
 This is good improvement, will work towards improving the score to 90/100.
 
-Update 1: Cloudfront was not showing custom 404 error page, this is due to directly using S3 bucket as Origin for cloudfront, when change to use S3 public endpoint,it fixed this issue
+Update 1: Cloudfront was not showing custom 404 error page, this is due to directly using S3 bucket as Origin for cloudfront, when changed this  to use S3 public endpoint,it fixed the issue
