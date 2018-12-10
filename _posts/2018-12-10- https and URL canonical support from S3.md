@@ -19,6 +19,7 @@ For redirecting the www traffic to root-domain, most recommendations are to have
 As workaround, have to overcome https termination for  https://www.nageshdn.com at layer before S3 using cloudfront, hence setup additional cloudfront distribution which will perform https offloads to only subdomain www and the backend S3 bucket ( which is empty) will just redirect www.nageshdn.com  to [nageshdn.com](http://nageshdn.com), to support this additional cloudfront distribution, have to modify AWS certificate manager(ACM) to be applicable to wildcard subdomains (*.nageshdn.com )
 
 Per [AWS well architected framework](https://aws.amazon.com/architecture/well-architected/) : this changes should
+
     1. Security : Increase security of the architecure, as www traffic will also support https
     2.Performance: for www bound traffic,there is additional step of redirect , which is cached at cloudfront and uses alias for faster   performance
     3.Operational execellence: all www/non-www and http/https is supported, additional cloudfront distribution does not need any maintenance.
