@@ -1,6 +1,7 @@
 ---
 layout: post
 title: https and URL canonical support from S3
+tags: s3 cloudfront website ACM
 ---
 
 The main disadvantage of hosting static websites from S3 is, there is no native https/SSL enabled for S3 website endpoints,it supports only http endpoint, to get around this, https/SSL termination can be enabled at cloudfront distribution for S3 website using ACM feature of AWS, so websites accessed using cloudfront ( Route 53 and cloudfront alias), will support http/https traffic. More details on this on enabling https for S3 using cloudfront can be found  [here](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/)
