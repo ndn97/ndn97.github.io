@@ -22,8 +22,8 @@ Per [AWS well architected framework](https://aws.amazon.com/architecture/well-ar
 
     - Security : Increase security of the architecure, as www traffic will also support https
     - Performance: for www bound traffic,there is additional step of redirect , which is cached at cloudfront and uses alias for faster   performance
-    - Operational execellence: all www/non-www and http/https is supported, additional cloudfront distribution does not need any maintenance.
-    - Cost: there is no additional cost incurred, since traffic is divided between distribution 
+    - Operational Excellence: all www/non-www and http/https is supported, additional cloudfront distribution does not need any maintenance.
+    - Cost: there is no additional cost incurred, since existing traffic is divided between 2 distributions and converged in the backend
     - Reliability: there is no additional failure aspects introduced by this change
 
 After setting this up, I see URL cannonical test works for this website.
