@@ -8,14 +8,15 @@ Personal/Business hosted email services from  Google Gsuite, Office 365, Amazon 
 
 What if there is  hosted Email service, dedicated to your domain and gets charged based on actual transaction/storage charges? that should meet the needs of this website, came across this project called [ses-lambda-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder), which is a lambda function and uses inbound/outbound capabilities of AWS Simple Email Service (SES) to run a serverless email forwarding service, details of how to configure it are available with the project itself. 
 
-
 Though AWS SES is good fit for mostly API based usage (transactional emails,marketing which are triggerd automatically)  and does not have any inbox to check/send emails, when configured with SES rulesets  to store/forward the emails using lambda function, one can get the benefit of unlimited storage (gmail/office provides between 30-50G storage per user) from S3,can be used for analytics ,archival in glacier for any number of years. You gain complete control over the email service/compute/storing those mails
 
-For inbox/composing mails,can continue to use gmail/outlook as client (alias feature of gmail), this is accomplished using smtp credentials of AWS SES, while composing emails..
+To integrate AWS SES to your  mail client of choice such as outlook/gmail,setting one time sync with smtp credentials is all required to compose/send/receive mails. Since AWS SES, can only send mails on behalf of your verified domain name, mails recieved and are forwarded to your mail client will come with a generic email-address such as no-reply/forward from your domain, but reply to such mail will go to intended user (used reply-to) feature.
 
+Expected solution cost for 1 email user, to send/receive of 1MB in size email of 100 mails per day for 20 days a month are as follows 
+*Total mails: 2000 emails @ 2GB storage and associated transfer charges
 
+*SES charges: upto 1000 send and 1000 received mails are free per month for lifetime, attachment charges is around $0.12/GB,transfer charges are free for 1st 1GB and charged $.09 thereafter, overall charges could be around $0.33
+*Compute(2000 lambda invocations of 128 MB,20 sec time) : 5200 GB-sec, $0 ( within free tier limit for lifetime)
+*Storage charges: $0.2 for 2GB + $0.1(metadata) ,$0.3
 
-
-
-  
-    
+overall solution cost should be around $0.7/user when you start, as the mails grow month-month, the storage costs will also increase proportionally. 
