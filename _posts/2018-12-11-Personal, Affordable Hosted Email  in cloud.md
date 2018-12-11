@@ -13,10 +13,10 @@ AWS SES is good fit for mostly API based usage (transactional emails,marketing w
 To integrate AWS SES to mail client of choice such as outlook/gmail, setting one time sync with smtp credentials is all required to compose/send/receive mails. Since AWS SES, can only send mails on behalf of  verified domain name, mails recieved/forwarded to the mail client has unattended email-address such as no-reply/info user of the domain, Any reply to such mail will go to intended user (uses reply-to) feature.
 
 Expected solution cost for 1 email user, to send/receive  1MB size email, 100 mails per day for 20 days a month, are as follows 
-*Total mails: 2000 emails @ 2GB storage and associated transfer charges
+- Total mails: 2000 emails @ 2GB storage and associated transfer charges
 
-*SES charges: upto 1000 send and 1000 received mails are free per month for lifetime, attachment charges is around $0.12/GB,transfer charges are free for 1st 1GB and charged $.09 thereafter, overall charges could be around $0.33
-*Compute(2000 lambda invocations of 128 MB,20 sec time) : 5200 GB-sec, $0 ( within free tier limit for lifetime)
-*Storage charges: $0.2 for 2GB + $0.1(metadata) ,$0.3
+- SES charges: upto 1000 send and 1000 received mails are free per month for lifetime, attachment charges is around $0.12/GB,transfer charges are free for 1st 1GB and charged $.09 thereafter, overall charges could be around $0.33
+- Compute(2000 lambda invocations of 128 MB,20 sec time) : 5200 GB-sec, $0 ( within free tier limit for lifetime)
+- Storage charges: $0.2 for 2GB + $0.1(metadata) ,$0.3
 
-overall solution cost should be around $0.7/user when you start, as the mails grow month-month, the storage costs will also increase proportionally. 
+overall solution cost will be around $0.7/user at start, as the mails grow month on month, accumulated storage and its costs will increase proportionally. currently this is adopted as choice of email for this site, reach out to me to check this [here](mailto:ndn@nageshdn.com). 
