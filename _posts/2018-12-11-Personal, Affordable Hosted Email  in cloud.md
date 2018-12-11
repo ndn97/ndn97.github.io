@@ -4,9 +4,9 @@ title: Personal,Affordable Hosted Email  in cloud
 tags: Email SES AWS 
 ---
 
-Personal/Business hosted email services from  Google Gsuite, Office 365, AWS workmail etc is default choice for most pro users, the main advantage of these managed email services are large mailbox (upto 50G), archive/retention capability and other integrations with third party services. typical costs of these hosted email services are based on monthly rental and other features, which gets charged irrespective of actual usage.
+Personal/Business hosted email services from  Google Gsuite, Office 365, AWS workmail etc are default choice for most pro users. Main advantage of these managed email services are large mailbox (upto 50G), archive/retention capability and other integrations with third party services. typical costs of these hosted email services are based on monthly rental and other features, which gets charged irrespective of actual usage.
 
-What if there is  hosted email service, wnich gets charged based on actual transaction/usage charges? Project [ses-lambda-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder), which is a lambda function and uses inbound/outbound capabilities of AWS Simple Email Service (SES) to run a serverless email forwarding service, details of how to configure it are available with the project itself. 
+What if there is  hosted email service, wnich gets charged based on actual transaction/usage charges? Project [ses-lambda-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder), is a lambda function and uses inbound/outbound capabilities of AWS Simple Email Service (SES) to run a serverless email forwarding service, details of how to configure it are available with the project itself. 
 
 AWS SES is good fit for mostly API based usage (transactional emails,marketing which are triggerd automatically)  and does not come with any mail client to check/send emails. AWS SES allows rulesets for processing mails using lambda, and can be used to store/forward them as required. one can get the benefit of unlimited email storage (gmail/office provides between 30-50G storage per user) from S3,can be used for analytics,archival in glacier for any number of years and gain control over the underlying mail infrastructure i,e email/compute/storage.
 
