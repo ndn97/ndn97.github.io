@@ -1,0 +1,14 @@
+---
+layout: post
+title: Personal,Affordable Hosted Email  in cloud
+tags: Email SES AWS 
+---
+
+Personal/Business Hosted email services which are common to most users are Google Gsuite, Office 365, Amazon workmail etc, the main advantage of these Hosted services are large mailbox storage(upto 50G), archive/retention capability and other integrations with third part services.typical costs of these hosted email services are based on monthly rental and other addon features, which gets charged irrespective of actual usage.
+
+What if there is an Hosted Email service dedicated to your domain and gets charged based on actual transaction/storage charges? that should meet the needs of this website, came across this project called [ses-lambda-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder), which is a lambda function which uses AWS SES inbound/outbound capabilities of AWS Simple Email Service (SES) to run a "serverless" email forwarding service.
+
+
+
+  
+    
