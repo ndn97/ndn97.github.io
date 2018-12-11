@@ -22,3 +22,6 @@ After performing HTML compression and enabling sitemap and robots.txt, the score
 This is good improvement, will work towards improving the score to 90/100.
 
 Update 1: Cloudfront was not showing custom 404 error page, this is due to directly using S3 bucket as Origin for cloudfront, when changed this  to use S3 public endpoint,it fixed the issue
+
+Update 2: After implementing url cannonical implementation as discussed  [here](https://nageshdn.com/2018/12/10/https-and-URL-canonical-support-from-S3.html), score has improved to 92/100 and goal accomplished.
+![After SEO 2](/assets/screenshots/update2_seo.png)
