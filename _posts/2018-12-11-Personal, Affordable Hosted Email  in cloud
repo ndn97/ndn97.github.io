@@ -4,9 +4,15 @@ title: Personal,Affordable Hosted Email  in cloud
 tags: Email SES AWS 
 ---
 
-Personal/Business Hosted email services which are common to most users are Google Gsuite, Office 365, Amazon workmail etc, the main advantage of these Hosted services are large mailbox storage(upto 50G), archive/retention capability and other integrations with third part services.typical costs of these hosted email services are based on monthly rental and other addon features, which gets charged irrespective of actual usage.
+Personal/Business hosted email services which are common to most users are Google Gsuite, Office 365, Amazon workmail etc, the main advantage of these managed email services are large mailbox storage(upto 50G), archive/retention capability and other integrations with third part services. typical costs of these hosted email services are based on monthly rental and other addon features, which gets charged irrespective of actual usage.
 
-What if there is an Hosted Email service dedicated to your domain and gets charged based on actual transaction/storage charges? that should meet the needs of this website, came across this project called [ses-lambda-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder), which is a lambda function which uses AWS SES inbound/outbound capabilities of AWS Simple Email Service (SES) to run a "serverless" email forwarding service.
+What if there is  hosted Email service, dedicated to your domain and gets charged based on actual transaction/storage charges? that should meet the needs of this website, came across this project called [ses-lambda-forwarder](https://github.com/arithmetric/aws-lambda-ses-forwarder), which is a lambda function and uses inbound/outbound capabilities of AWS Simple Email Service (SES) to run a "serverless" email forwarding service. 
+
+Though AWS SES is good fit for mostly API based usage (transactional emails,marketing which are triggerd automatically)  and does not have any configured inbox to check emails, when we  configure rulesets for the SES to store/forward the emails using lambda function, one can get the benefit unlimited storage (gmail/office provides between 30-50G storage per user) from S3,can be used for analytics ,archival in glacier.
+
+For inbox/composing mails,can continue to use gmail/outlook as client (alias feature of gmail), this is accomplished using smtp credentials of AWS SES, while composing emails, w
+
+
 
 
 
