@@ -4,7 +4,7 @@ title: Cloud9 Desktop App for Windows
 tags: Cloud9 AWS Desktop
 ---
 
-Cloud9 IDE is very productive even with its usage only through browser, its intergrated terminal for quickly running commands and manage AES environment is helpful. As detailed in the earlier [post](2018-12-04-Cloud9 Environment Setup.md) on setting up AWS cloud9 environment as main IDE in cloud/browser, got to know cloud9 IDE running as MacOS native app , this  is based on [Nativefier](https://github.com/jiahaog/nativefier), which convert web apps to native apps as required for MacOS,Linux,Windows.
+Cloud9 IDE is very productive even with its usage only through browser, its intergrated terminal for quickly running commands and manage AES environment is helpful. As detailed in the earlier [post](https://nageshdn.com/2018/12/04/Cloud9-Environment-Setup.html) on setting up AWS cloud9 environment as main IDE in cloud/browser, got to know cloud9 IDE running as MacOS native app , this  is based on [Nativefier](https://github.com/jiahaog/nativefier), which convert web apps to native apps as required for MacOS,Linux,Windows.
 
 
 Here are the steps to convert Cloud9 IDE to Windows native App using Nativefier,by which no need to remember the http link of IDE and app will be conveniently available as native app on the taskbar/desktop for improved desktop experience.
