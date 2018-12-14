@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Cloud9 Native Desktop App on Windows
-tags: Email SES AWS 
+tags: Cloud9 AWS Desktop
 ---
 
-Cloud9 IDE is very productive even with its usage only through browser, best part is intergrated terminal for quickly checking on ec2 instances. As detailed in the earlier post on setting up AWS cloud9 environment as main IDE in cloud/browser, got to know cloud9 IDE running as MacOS native app , this  is based on Nativefier, which convert webapps to native apps as required for MacOS,Linux,Windows.
+Cloud9 IDE is very productive even with its usage only through browser, its intergrated terminal for quickly running commands and manage AES environment is helpful. As detailed in the earlier [post](2018-12-04-Cloud9 Environment Setup.md) on setting up AWS cloud9 environment as main IDE in cloud/browser, got to know cloud9 IDE running as MacOS native app , this  is based on [Nativefier](https://github.com/jiahaog/nativefier), which convert webapps to native apps as required for MacOS,Linux,Windows.
 
 
-Here is the steps for  to convert Cloud9 IDE to Windows Native App using Nativefier,by which no need to remember the http link of IDE and App will be  conveniently available as native app on the taskbar and desktop experience.
+Here is the steps for  to convert Cloud9 IDE to Windows Native App using Nativefier,by which no need to remember the http link of IDE and App will be  conveniently available as native app on the taskbar and to get desktop experience.
  
 1. Prepare your cloud9 env and obtain the IDE address (https://region.console.aws.amazon.com/cloud9/ide/XXX)
 2. Login to IDE from browser, go into terminal mode (CTRL-T) and install natifier app by running (npm install nativefier -g)
@@ -20,12 +20,13 @@ Here is the steps for  to convert Cloud9 IDE to Windows Native App using Nativef
 8. create shortcut/pin to taskbar from the executable (AWS Cloud9.exe)
 
 
-![Cloud9 Running in Browser](/assets/screenshots/cloud9_web.png):
+
+![Cloud9 Running in Browser] (/assets/screenshots/cloud9_web.png)
 
 
 
 
-![Cloud9 Running as Native Windows App](/assets/screenshots/cloud9_native.png):
+![Cloud9 Running as Native Windows App] (/assets/screenshots/cloud9_native.png):
 
 
 
