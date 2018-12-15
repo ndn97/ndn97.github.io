@@ -13,7 +13,7 @@ Here are the steps to convert Cloud9 IDE to Windows native App using Nativefier,
 3. Go to /tmp path and validate natifier is working ( nativefier --help )
 4. Run the command for windows,64 bit OS
     nativefier --single-instance --icon=./AWSCloud9.icns --internal-urls "" --name="AWS Cloud9" --disable-dev-tools --hide-window-frame --file-download-options '{"saveAs":true}' --platform="windows" --arch="x64" https://region.console.aws.amazon.com/cloud9/ide/XXX
-5. Step #4 , will create AWS Cloud9-win32-x64  folder,  zip it for download (zip -r cloud9.zip AWS\ Cloud9-win32-x64)
+5. Step 4 , will create AWS Cloud9-win32-x64  folder,  zip it for download (zip -r cloud9.zip AWS\ Cloud9-win32-x64)
 6. Copy zip folder to S3 (aws s3 cp cloud9.zip <some-bucket-you-own>)
 7. Download cloud9.zip from S3 bucket and extract zip
 8. Create shortcut/Pin to taskbar from the executable (AWS Cloud9.exe)
