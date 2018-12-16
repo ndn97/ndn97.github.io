@@ -8,7 +8,7 @@ Existing codebuild using the AWS provided ruby templates for build/validation is
 
 Here are the phases of the build and time it was taking:
 
-![codebuild_phases_before_20181216](/assests/screenshots/codebuild_phases_before_20181216.png)
+![codebuild_phases_before_20181216](/assests/screenshots/codebuild_phases_before-20181216.png)
 
 As noticied, most part of the build time is spent in Install phase, which is installing required gems for Jekyll build to work,Hence reducing this install phase should reduce the overall build time.
 
@@ -24,7 +24,7 @@ AWS codebuild also supports custom docker images, Hence taking the AWS Codebuild
 
 Here are the phases of the build after optimization and time it is taking currently:
 
-![codebuild_phases_after_20181216](/assests/screenshots/codebuild_phases_after_20181216.png)
+![codebuild_phases_after_20181216](/assests/screenshots/codebuild_phases_after-20181216.png)
 
-From architectural perspective, this change adds additional layer of maintenance by introduction of docker image and its ECR repositiry, but it improves the runtime significantly and as failover ,no code change is required to move codebuild to standard images when ever required. The additional ECR repository adds fixed cost for stored images and data transfer in/out is not charged since all of this is within the same region of AWS, the fixed cost to maintain ECR for docker repository will breakeven only when more than 20 build minutes are used per month, overall this change helps to gain further control over the  build process and improve runtime in future.
+From architectural perspective, this change improves the runtime significantly,gain further control over the  build process and improve runtime in future optimizations but also adds additional layer of maintenance by introduction of docker image and its ECR repository, but from operational standpoint, this change can be modified/removed with no code/application change by using codebuild environment to use standard images when ever required. Additional ECR repository adds fixed cost for stored docker images and data transfer in/out is not charged since all of this is within the same region of AWS, fixed cost to maintain ECR will breakeven only when more than 20 build minutes are used per month.
 
