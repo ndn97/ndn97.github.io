@@ -26,5 +26,7 @@ Here are the phases of the build after change and time it spent in each phase (2
 
 ![After](/assets/screenshots/codebuild_phases_after-20181216.png)
 
-From architectural perspective, this change improves  runtime significantly,gain further control over the  build process and improve runtime in future optimizations but also adds additional layer of maintenance by introduction of docker image and its ECR repository, but from operational standpoint, this change can be modified/removed with no code/application change by using codebuild environment to use standard images when ever required. Additional ECR repository adds fixed cost for stored docker images and data transfer in/out is not charged since all of this is within the same region of AWS, fixed cost to maintain ECR will breakeven only when more than 20 build minutes are used per month.
+From architectural perspective, this change improves  runtime significantly,gain further control over the  build process and improve runtime in future optimizations but also adds additional layer of maintenance by introduction of docker image and its ECR repository, but from operational standpoint, this change can be modified/removed with no code/application change by using codebuild environment to use standard images when ever required. 
+
+There is variability in performance(runtime) due to docker cold start when build is trigger for the first time/not-cached,subsquent runs shows improved performance as given above. Additionally ECR repository adds fixed cost for stored docker images and data transfer in/out is not charged since all of this is within the same region of AWS, fixed cost to maintain ECR will breakeven only when more than 20 build minutes are used per month.
 
