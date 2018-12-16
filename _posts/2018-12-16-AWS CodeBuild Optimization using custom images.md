@@ -17,11 +17,14 @@ AWS codebuild also supports custom docker images, Hence taking the AWS Codebuild
 1. Obtain official AWS codebuild images from [here](https://github.com/aws/aws-codebuild-docker-images)
 2. Customize ruby  dockerfile to install gems  after bundler [update](https://github.com/aws/aws-codebuild-docker-images/blob/master/ubuntu/ruby/2.5.3/Dockerfile)
 3. Build docker image from dockerfile
-4. Obtain the source code and run docker image locally on the host ()
-5.If everything works as expected, push the docker image to ecr repository
-6.Change the codebuild environment to use the custom docker image by referencing your ECR/docker image by its tag
-7.Validate codebuild works
+4. Obtain the source code and run docker image locally on the host using [codebuild local agent] (https://docs.aws.amazon.com/codebuild/latest/userguide/use-codebuild-agent.html)
+5. If everything works as expected, push the docker image to ecr repository
+6. Change the codebuild environment to use the custom docker image by referencing your ECR/docker image by its tag
+7. Validate codebuild works
 
-Here are the
+Here are the phases of the build after optimization and time it is taking currently:
 
+![codebuild_phases_after_20181216](/assests/screenshots/codebuild_phases_after_20181216.png)
+
+From architectural perspective, this change adds additional layer of maintenance by introduction of docker image and its ECR repositiry, but it improves the runtime significantly and as failover ,no code change is required to move codebuild to standard images when ever required. The additional ECR repository adds fixed cost for stored images and data transfer in/out is not charged since all of this is within the same region of AWS, the fixed cost to maintain ECR for docker repository will breakeven only when more than 20 build minutes are used per month, overall this change helps to gain further control over the  build process and improve runtime in future.
 
