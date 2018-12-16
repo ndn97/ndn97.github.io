@@ -4,13 +4,13 @@ title: AWS CodeBuild Optimization using custom images
 tags: CodeBuild AWS Optimization docker
 ---
 
-Existing codebuild using the AWS provided ruby templates for build/validation is working good, however noticed that in last few days,the build time is crossing beyond 1 minute 15 seconds, which gets charged as 2 minutes by AWS codebuild, hence was looking for way to reduce the build time to less than 1 minute. 
+Existing codebuild using  AWS provided docker/ruby templates for build/validation is working good, however noticed that in last few days,the build time is crossing beyond 1 minute 15 seconds, which gets charged as 2 minutes by AWS codebuild, hence was looking for ways to reduce the build time to less than 1 minute. 
 
-Here are the phases of the build and time it was taking:
+Here are the phases of the build and time it spent in each phase ( 62 seconds for Install):
 
-![codebuild_phases_before_20181216](/assests/screenshots/codebuild_phases_before-20181216.png)
+![Before](/assets/screenshots/codebuild_phases_before-20181216.png)
 
-As noticied, most part of the build time is spent in Install phase, which is installing required gems for Jekyll build to work,Hence reducing this install phase should reduce the overall build time.
+As noticed, most part of the build time is spent in Install phase, which is installing required gems for Jekyll build to work,Hence reducing this install phase should reduce the overall build time.
 
 AWS codebuild also supports custom docker images, Hence taking the AWS Codebuild docker image and customizing it with required gems,shoudl reduce the runtime, Here are the highlevel steps to do the same.
 
@@ -22,9 +22,9 @@ AWS codebuild also supports custom docker images, Hence taking the AWS Codebuild
 6. Change the codebuild environment to use the custom docker image by referencing your ECR/docker image by its tag
 7. Validate codebuild works
 
-Here are the phases of the build after optimization and time it is taking currently:
+Here are the phases of the build after change and time it spent in each phase (2 seconds for Install):
 
-![codebuild_phases_after_20181216](/assests/screenshots/codebuild_phases_after-20181216.png)
+![After](/assets/screenshots/codebuild_phases_after-20181216.png)
 
 From architectural perspective, this change improves the runtime significantly,gain further control over the  build process and improve runtime in future optimizations but also adds additional layer of maintenance by introduction of docker image and its ECR repository, but from operational standpoint, this change can be modified/removed with no code/application change by using codebuild environment to use standard images when ever required. Additional ECR repository adds fixed cost for stored docker images and data transfer in/out is not charged since all of this is within the same region of AWS, fixed cost to maintain ECR will breakeven only when more than 20 build minutes are used per month.
 
