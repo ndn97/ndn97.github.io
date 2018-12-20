@@ -4,7 +4,7 @@ title:S3 Failover to Github.md
 tags: S3 Route53 Github AWS O
 ---
 
-AWS S3 storage and S3 websites are highest available services, as they are backed by AWS SLA of 99.99% availability in a given year. AWS [health status](https://status.aws.amazon.com/) also leverages S3, however there are chances still S3 can go down, here is [report](https://www.theregister.co.uk/2017/03/01/aws_s3_outage/), where AWS S3 was down for few hours and AWS also had no access to  update the health status.
+AWS S3 storage and S3 websites are highest available services in terms of uptime, as they are backed by AWS SLA of 99.99% availability in a given year. AWS [health status](https://status.aws.amazon.com/) also leverages S3, however there are chances still S3 can go down, here is [report](https://www.theregister.co.uk/2017/03/01/aws_s3_outage/), where AWS S3 was down for few hours and AWS also had no access to  update the health status.
 
 With this context, is there a way to automatically failover when highly reliably AWS S3 fails and still run your services?
 since this site relies on github as a repo/editor, few months ago, github also started to support https on [custom domain names](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/) , Hence github pages is right alternative for AWS S3 for static sites. So the change required is to add github pages as failover whenever underlying S3  fails or configuration/deployment failure to S3.
