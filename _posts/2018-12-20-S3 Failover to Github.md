@@ -1,6 +1,6 @@
 ---
 layout: post
-title:S3 Failover to Github.md
+title: S3 Failover to Github.md
 tags: S3 Route53 Github AWS O
 ---
 
