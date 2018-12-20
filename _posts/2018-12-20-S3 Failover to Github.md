@@ -1,7 +1,7 @@
 ---
 layout: post
-title: S3 Failover to Github.md
-tags: S3 Route53 Github AWS O
+title: S3 Failover to Github
+tags: S3 Route53 Github AWS
 ---
 
 AWS S3 storage and S3 websites are highest available services in terms of uptime, as they are backed by AWS SLA of 99.99% availability in a given year. AWS [health status](https://status.aws.amazon.com/) also leverages S3, however there are chances still S3 can go down, here is [report](https://www.theregister.co.uk/2017/03/01/aws_s3_outage/), where AWS S3 was down for few hours and AWS also had no access to  update the health status.
