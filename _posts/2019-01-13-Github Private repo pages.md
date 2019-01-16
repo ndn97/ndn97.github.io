@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Github Private repo for hosting pages
-tags: Github hosting AWS  
+tags: Github hosting
 ---
 
 This website uses github as repository/editor for markdown and  AWS for distribution using S3/Cloudfront. Github repo has to be public/open if it is not subscribed to paid plans. The other alternative to have private repo is bitbucket or AWS codecommit.
