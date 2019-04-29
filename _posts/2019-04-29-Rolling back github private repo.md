@@ -4,7 +4,7 @@ title: Rolling back github private repo
 tags: Github Private Hosting
 ---
 
-As detailed in the earlier post,hosted this website in the github private repo with github pages until today. 
+As detailed in the earlier post,hosted this website in github private repo with github pages until today. 
 
 Last week,Received following notification about github pages not supported in private-free accounts
 
