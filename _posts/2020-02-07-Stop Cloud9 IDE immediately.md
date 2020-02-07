@@ -8,7 +8,7 @@ AWS cloud9 IDE simplifed access and development in Cloud by using cloud native I
 To reduce wastage of unused EC2 instances which are the backend of Cloud9, Cloud9 IDE detects presence of user based on activity 
 and shutdowns EC2 instances using predetermined interval.
 
-The minimum time to configure inactivity is 30 mins, which means when user is not using cloud9  upto 30 mins, Cloud9 shutsdown
+The minimum time to configure inactivity is 30 minutes, which means when user is not using cloud9  upto 30 mins, Cloud9 shutsdown
 EC2 instance.
 
 To enable immediate shutdown of cloud9 environment on determinstic use cases, user can accomplish this by following process.
