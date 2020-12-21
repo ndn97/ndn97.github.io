@@ -12,4 +12,5 @@ group :jekyll_plugins do
   gem "jekyll-avatar"
   gem "jekyll-mentions"
   gem "jekyll-include-cache"
+  gem "kramdown-parser-gfm"
 end
