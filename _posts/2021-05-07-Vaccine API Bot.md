@@ -6,9 +6,7 @@ tags: python3 linux API
 
 Currently Govt has open sourced covid vaccine availability API's in India as given [here](https://apisetu.gov.in/public/marketplace/api/cowin), Vaccine slots are limited and  difficult to know when those slots gets opened.
 Here is simple bot created to monitor the vaccine slots and notify interested users when those slots are available.
- 
-
-    # test.timer
+   
     #!/usr/bin/env python3
     import json,urllib3,datetime,time,logging,telegram,configparser
 
@@ -55,8 +53,7 @@ Here is simple bot created to monitor the vaccine slots and notify interested us
  Incase slots are open ( found=1), need to validate and alert without this 4 seconds delay, hence utilizes double break points and skips the 4 seconds delay with found=1 flag
  
  Example snapshot of the telegram alerts is as follows:
- 
- ![snapshot](assets/screenshots/telegram-vaccine-slot.jpg)
+ ![Telegram Notification Snapshot](/assets/screenshots/telegram-vaccine-slot.jpg)
  
  
 
