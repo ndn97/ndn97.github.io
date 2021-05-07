@@ -49,6 +49,8 @@ Here is simple bot created to monitor the vaccine slots and notify interested us
             time.sleep(4)
         else:
             continue
+ 
+ 
  API is  enforcing 100 calls/5 mins rate limit per IP, which translates to 1 call/3 seconds,hence after every iteration, the bot sleeps for 4 seconds
  Incase slots are open ( found=1), need to validate and alert without this 4 seconds delay, hence utilizes double break points and skips the 4 seconds delay with found=1 flag
  
